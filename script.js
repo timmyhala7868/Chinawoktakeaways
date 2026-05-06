@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(response => response.text())
     .then(data => {
       // Find the specific div in your HTML and put the text inside it
-      const menuContainer = document.getElementById('menu-container');
+      const menuContainer = document.getElementById('menu-container1');
       if (menuContainer) {
         menuContainer.innerText = data;
       }
