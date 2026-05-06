@@ -27,53 +27,88 @@
     </section>
 
     <section class="menu-section">
-        <!-- Paste this where you want the menu to appear -->
-<div class="menu-section">
+<div class="menu-container">
     <style>
-        .menu-cat { margin-top: 25px; border-bottom: 2px solid #333; }
-        .menu-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #ccc; }
-        .menu-price { font-weight: bold; padding-left: 15px; }
-        .menu-sub { font-style: italic; font-size: 0.9em; color: #555; }
+        .menu-section-title { margin-top: 30px; border-bottom: 2px solid #222; text-transform: uppercase; font-weight: bold; }
+        .menu-item { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted #ccc; }
+        .menu-item span:first-child { flex: 1; padding-right: 10px; }
+        .price-tag { font-weight: bold; white-space: nowrap; }
+        .menu-desc { font-size: 0.9em; color: #666; font-style: italic; margin-bottom: 10px; }
+        .special-box { border: 1px solid #444; padding: 10px; margin: 10px 0; background: #f9f9f9; }
     </style>
 
-    <h2 class="menu-cat">Deep Fried Dishes on White Rice</h2>
-    <p class="menu-sub">(Cooked with mixed vegetables)</p>
-    <div class="menu-row"><span>Chicken & Vegetables</span><span class="menu-price">$18.00</span></div>
-    <div class="menu-row"><span>Chicken & Cashew Nuts / Mushroom / Pineapple</span><span class="menu-price">$18.50</span></div>
-    <div class="menu-row"><span>BBQ Pork & Vegetables / Cashew / Mushroom / Pineapple</span><span class="menu-price">$18.50</span></div>
-    <div class="menu-row"><span>Beef & Vegetables</span><span class="menu-price">$18.00</span></div>
-    <div class="menu-row"><span>Beef & Cashew / Mushroom / Pineapple</span><span class="menu-price">$19.00</span></div>
-    <div class="menu-row"><span>Beef & Black Bean / Oyster Sauce / Ginger & Spring Onion</span><span class="menu-price">$19.00</span></div>
-    <div class="menu-row"><span>Scallops & Vegetables</span><span class="menu-price">$24.00</span></div>
-    <div class="menu-row"><span>Scallops & Cashew Nuts</span><span class="menu-price">$26.00</span></div>
-    <div class="menu-row"><span>Lemon Sauce Chicken or Fish</span><span class="menu-price">$18.00</span></div>
-    <div class="menu-row"><span>Honey Chicken Pineapple with White Rice</span><span class="menu-price">$18.00</span></div>
+    <h2 class="menu-section-title">Deep Fried Dishes on White Rice</h2>
+    <p class="menu-desc">(Cooked with mixed vegetables)</p>
+    <div class="menu-item"><span>Chicken & Vegetables</span><span class="price-tag">$18.00</span></div>
+    <div class="menu-item"><span>Chicken (Cashew / Mushroom / Pineapple)</span><span class="price-tag">$18.50</span></div>
+    <div class="menu-item"><span>BBQ Pork (Vegetables / Cashew / Mushroom / Pineapple)</span><span class="price-tag">$18.50</span></div>
+    <div class="menu-item"><span>Beef & Vegetables</span><span class="price-tag">$18.00</span></div>
+    <div class="menu-item"><span>Beef (Cashew / Mushroom / Pineapple / Black Bean / Oyster)</span><span class="price-tag">$19.00</span></div>
+    <div class="menu-item"><span>Beef, Ginger & Spring Onion</span><span class="price-tag">$19.00</span></div>
+    <div class="menu-item"><span>Scallops & Vegetables</span><span class="price-tag">$24.00</span></div>
+    <div class="menu-item"><span>Scallops & Cashew Nuts</span><span class="price-tag">$26.00</span></div>
+    <div class="menu-item"><span>Lemon Sauce (Chicken or Fish)</span><span class="price-tag">$18.00</span></div>
 
-    <h2 class="menu-cat">Fish of the Day</h2>
-    <div class="menu-row"><span>Warehou</span><span class="menu-price">$5.50</span></div>
-    <div class="menu-row"><span>Snapper (Fresh)</span><span class="menu-price">$9.00</span></div>
-    <div class="menu-row"><span>Gurnard (Fresh)</span><span class="menu-price">$7.50</span></div>
+    <h2 class="menu-section-title">Fish of the Day</h2>
+    <div class="menu-item"><span>Warehou</span><span class="price-tag">$5.50</span></div>
+    <div class="menu-item"><span>Snapper (Fresh)</span><span class="price-tag">$9.00</span></div>
+    <div class="menu-item"><span>Gurnard (Fresh)</span><span class="price-tag">$7.50</span></div>
 
-    <h2 class="menu-cat">Sides & Snacks</h2>
-    <div class="menu-row"><span>Chips (Full / Half)</span><span class="menu-price">$5.30 / $3.70</span></div>
-    <div class="menu-row"><span>Kumara Chips / Garlic Chips / Wedges</span><span class="menu-price">$8.00 / $7.50</span></div>
-    <div class="menu-row"><span>Potato Fritter / Mussel / Onion / Wonton / Squid Ring</span><span class="menu-price">$1.50 - $1.80</span></div>
-    <div class="menu-row"><span>Pineapple Fritter / Banana Fritter</span><span class="menu-price">$2.20 / $3.70</span></div>
-    <div class="menu-row"><span>Sausage / Saveloy / Hot Dog</span><span class="menu-price">$4.30 / $3.00</span></div>
-    <div class="menu-row"><span>Spring Roll / Curry Rice Roll / Meat Pattie</span><span class="menu-price">$4.20 / $3.30</span></div>
-    <div class="menu-row"><span>Dim Sum (6 pcs) / Dumplings (12 pcs)</span><span class="menu-price">$14.00 / $21.00</span></div>
+    <h2 class="menu-section-title">Vegetables & Side Dishes</h2>
+    <div class="menu-item"><span>Chips (Full / Half)</span><span class="price-tag">$5.30 / $3.70</span></div>
+    <div class="menu-item"><span>Kumara Chips / Garlic Chips / Wedges</span><span class="price-tag">$8.00 / $7.50</span></div>
+    <div class="menu-item"><span>Mussel / Potato Fritter</span><span class="price-tag">$1.80</span></div>
+    <div class="menu-item"><span>Wonton / Squid Ring / Onion Ring</span><span class="price-tag">$1.50 - $1.70</span></div>
+    <div class="menu-item"><span>Sausage / Saveloy</span><span class="price-tag">$4.30</span></div>
+    <div class="menu-item"><span>Hot Dog / Stuffed Mushroom</span><span class="price-tag">$3.00</span></div>
 
-    <h2 class="menu-cat">Burgers</h2>
-    <div class="menu-row"><span>Hamburger</span><span class="menu-price">$5.50</span></div>
-    <div class="menu-row"><span>Cheese / Egg / Mushroom / Bacon / Pineapple</span><span class="menu-price">$6.00 - $6.50</span></div>
-    <div class="menu-row"><span>Beef / Fish / Chicken / Hawaiian</span><span class="menu-price">$7.00</span></div>
-    <div class="menu-row"><span>Eltham Burger / Eltham Combo</span><span class="menu-price">$10.50 / $19.00</span></div>
+    <h2 class="menu-section-title">Chef's Specials & Combos</h2>
+    <div class="special-box">
+        <strong>SPECIAL FOR TWO - $47.00</strong><br>
+        1. Chicken Chow Mein, 2. Beef Fried Rice, 3. Sweet & Sour Wontons or Pork
+    </div>
+    <div class="special-box">
+        <strong>FAMILY SPECIAL - $64.00</strong><br>
+        1. Beef & Cashew, 2. Combination Fried Rice, 3. Chicken Egg Fu Young, 4. Sweet & Sour, 5. Chips
+    </div>
+    <div class="special-box">
+        <strong>SPECIAL FOR FOUR - $95.00</strong><br>
+        Chicken & Cashew, Sweet & Sour Pork, Beef Satay, Special Fried Rice, 8 Wontons, 4 Spring Rolls
+    </div>
 
-    <h2 class="menu-cat">Soups</h2>
-    <div class="menu-row"><span>Chicken & Sweetcorn</span><span class="menu-price">$12.00</span></div>
-    <div class="menu-row"><span>Wonton Soup</span><span class="menu-price">$18.00</span></div>
-    <div class="menu-row"><span>Bacon / Beef / Fish / Chicken / Hawaiian</span><span class="menu-price">$7.00</span></div>
+    <h2 class="menu-section-title">Fish & Chip Packs</h2>
+    <div class="menu-item"><span>$13 Pack (1 Chips, 1 Fish, 1 Hot Dog)</span><span class="price-tag">$13.00</span></div>
+    <div class="menu-item"><span>$19 Pack (1 Chips, 1 Fish, 2 Hot Dogs, 1 Sausage)</span><span class="price-tag">$19.00</span></div>
+    <div class="menu-item"><span>$30 Pack (2 Chips, 2 Fish, 2 Hot Dog, 2 Fritters, 2 Sausage)</span><span class="price-tag">$30.00</span></div>
+
+    <h2 class="menu-section-title">Fried Rice (Indonesian Style)</h2>
+    <div class="menu-item"><span>Nasi Goreng</span><span class="price-tag">$13.95</span></div>
+    <div class="menu-item"><span>Nasi Goreng Kampung</span><span class="price-tag">$15.50</span></div>
+    <div class="menu-item"><span>Nasi Goreng Special</span><span class="price-tag">$16.50</span></div>
+
+    <h2 class="menu-section-title">Curry Specials</h2>
+    <div class="menu-item"><span>Chicken Curry / Chicken Kalio</span><span class="price-tag">$15.00 / $14.50</span></div>
+    <div class="menu-item"><span>Beef Curry / Rendang Daging</span><span class="price-tag">$16.50</span></div>
+    <div class="menu-item"><span>Lamb Curry</span><span class="price-tag">$17.00</span></div>
+    <div class="menu-item"><span>Vegetable Curry</span><span class="price-tag">$13.00</span></div>
+
+    <h2 class="menu-section-title">Burgers</h2>
+    <div class="menu-item"><span>Hamburger</span><span class="price-tag">$5.50</span></div>
+    <div class="menu-item"><span>Cheese / Egg / Mushroom</span><span class="price-tag">$6.50</span></div>
+    <div class="menu-item"><span>Beef / Fish / Chicken / Hawaiian</span><span class="price-tag">$7.00</span></div>
+    <div class="menu-item"><span>Eltham Combo</span><span class="price-tag">$19.00</span></div>
+
+    <h2 class="menu-section-title">Bakery & Pies</h2>
+    <div class="menu-item"><span>Pork / Beef / Chicken Pie</span><span class="price-tag">$9.50</span></div>
+    <div class="menu-item"><span>Sausage Roll / Curry Puff</span><span class="price-tag">$7.00 / $7.50</span></div>
+    <div class="menu-item"><span>Pineapple Tart / Lapis Legit</span><span class="price-tag">$2.50 / $4.50</span></div>
+
+    <h2 class="menu-section-title">Drinks</h2>
+    <div class="menu-item"><span>Tea / Jasmine Tea / Coffee</span><span class="price-tag">$3.00 - $3.50</span></div>
+    <div class="menu-item"><span>Milo / Chocolate</span><span class="price-tag">$4.00</span></div>
+    <div class="menu-item"><span>Coca-Cola / Sprite / Mineral Water</span><span class="price-tag">$2.50 - $3.00</span></div>
 </div>
+
 
     </section>
 
