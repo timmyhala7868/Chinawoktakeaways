@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | China Wok Takeaways</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">CHINA WOK</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-header">
+        <h1>Our Menu</h1>
+        <p>Fresh, flavour-packed meals made to order</p>
+    </section>
+
+    <section class="menu-section">
+        <div class="menu-image-card reveal">
+            <img src="images/menu1.jpg" alt="Menu page 1" loading="lazy">
+        </div>
+
+        <div class="menu-image-card reveal">
+            <img src="images/menu2.jpg" alt="Menu page 2" loading="lazy">
+        </div>
+
+        <div class="menu-image-card reveal">
+            <img src="images/menu3.jpg" alt="Menu page 3" loading="lazy">
+        </div>
+    </section>
+
+    <section class="menu-highlights">
+        <div class="highlight-card reveal">
+            <h3>🍚 Rice Dishes</h3>
+            <p>Chicken, beef, seafood & vegetarian options with rich sauces.</p>
+        </div>
+
+        <div class="highlight-card reveal">
+            <h3>🍜 Noodles & Specials</h3>
+            <p>Chow mein, fried rice, and chef specialties cooked fresh.</p>
+        </div>
+
+        <div class="highlight-card reveal">
+            <h3>🍟 Takeaway Favourites</h3>
+            <p>Fish & chips, nuggets, fritters, and classic Kiwi sides.</p>
+        </div>
+
+        <div class="highlight-card reveal">
+            <h3>👨‍👩‍👧‍👦 Family Meals</h3>
+            <p>Great value combo deals perfect for sharing.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to order?</h2>
+        <p>Visit us in-store and enjoy fresh, hot meals.</p>
+        <a href="contact.html" class="btn">Find Us</a>
+    </section>
+
+    <footer>
+        <p>© 2026 China Wok Takeaways</p>
+    </footer>
+
+    <script>
+        // 1. SCROLL REVEAL: This fixes the "invisible" images issue
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100; 
+
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        // Trigger reveal on scroll and on initial page load
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+
+        // 2. LIGHTBOX: Click images to zoom
+        const images = document.querySelectorAll('.menu-image-card img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                const overlay = document.createElement('div');
+                overlay.classList.add('lightbox');
+
+                const fullImg = document.createElement('img');
+                fullImg.src = img.src;
+
+                overlay.appendChild(fullImg);
+                document.body.appendChild(overlay);
+
+                // Close when clicking the dark background
+                overlay.addEventListener('click', () => overlay.remove());
+            });
+        });
+    </script>
+
+</body>
+</html>
