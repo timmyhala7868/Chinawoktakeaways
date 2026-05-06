@@ -18,16 +18,3 @@ window.addEventListener('scroll', reveal);
 
 // Run once on load (in case images are already in view)
 window.addEventListener('load', reveal);
-
-window.addEventListener('DOMContentLoaded', () => {
-  fetch('menu.txt')
-    .then(response => response.text())
-    .then(data => {
-      // Find the specific div in your HTML and put the text inside it
-      const menuContainer = document.getElementById('menu-container1');
-      if (menuContainer) {
-        menuContainer.innerText = data;
-      }
-    })
-    .catch(error => console.error('Could not load menu:', error));
-});
