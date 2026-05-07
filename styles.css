@@ -148,7 +148,6 @@ nav a.active::after {
 .btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    width: 200;
 }
 
 .btn.secondary {
